@@ -1,2 +1,33 @@
-
+body {
+    box-sizing: border-box;
+    background: black;
+  }
+  
+  h1,
+  h3,
+  footer {
+    text-align: center;
+    color: #fff;
+  }
+  h3{
+      display: inline;
+  }
+  #container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 18em;
+  }
+  
+  textarea {
+    height: 50vh;
+    min-width: 80%;
+    padding: 1em;
+  }
+  #container span {
+    color: white;
+    font-weight: bold;
+    margin: 15px;
+  }
 /* Your CSS Code here. */
