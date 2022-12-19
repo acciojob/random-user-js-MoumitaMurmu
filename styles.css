@@ -1,33 +1,49 @@
-body {
-    box-sizing: border-box;
-    background: black;
-  }
-  
-  h1,
-  h3,
-  footer {
-    text-align: center;
-    color: #fff;
-  }
-  h3{
-      display: inline;
-  }
-  #container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 18em;
-  }
-  
-  textarea {
-    height: 50vh;
-    min-width: 80%;
-    padding: 1em;
-  }
-  #container span {
-    color: white;
-    font-weight: bold;
-    margin: 15px;
-  }
+
 /* Your CSS Code here. */
+#first-div {
+    display: flex;
+    word-spacing: normal;
+}
+
+#first-div h1 {
+    font-size: 45px;
+    margin-left: 10px;
+}
+
+#second-div img {
+    margin-left: 40px;
+    height: 220px;
+    width: 170px;
+}
+
+#second-div button {
+
+    height: 30px;
+    width: 90px;
+    font-size: 24px;
+    font-weight: 200;
+    margin-left: 15px;
+    margin-top: 40px;
+}
+
+#thrid-div h1 {
+
+    font-size: 40px;
+    margin-left: 25px;
+}
+
+#thrid-div h2 {
+
+    font-size: 35px;
+    margin-left: 25px;
+}
+
+#getUser {
+
+    height: 30px;
+    width: 110px;
+    font-size: 24px;
+    font-weight: 200;
+    margin-left: 25px;
+    margin-top: 40px;
+}
