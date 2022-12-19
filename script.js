@@ -1,42 +1,48 @@
-async function fetchdata() {
-  const url = "https://randomuser.me/api/";
-  const data = await fetch(url);
-  const response = await data.json();
-  // console.log(response);
-  return response.results[0];
-}
-const showuser = () => {
-  fetchdata().then((data) => {
-    console.log(data.name.first, data.name.last);
-    console.log(data.picture.large);
-    document.getElementById(
-      "img-box"
-    ).innerHTML = `<img src="${data.picture.large}">`;
-    document.getElementById(
-      "username"
-    ).innerHTML = `${data.name.first} ${data.name.last}`;
-    const ageButton = document.getElementById("age");
-    ageButton.addEventListener("click", () => {
-      console.log(data.dob.age);
-      document.getElementById("output").innerHTML = `<h1>${data.dob.age}<h1>`;
-    });
-    const EmailButton = document.getElementById("email");
-    EmailButton.addEventListener("click", () => {
-      console.log(data.email);
-      document.getElementById("output").innerHTML = `<h1>${data.email}<h1>`;
-    });
-    const PhoneButton = document.getElementById("phone");
-    PhoneButton.addEventListener("click", () => {
-      console.log(data.phone);
-      document.getElementById("output").innerHTML = `<h1>${data.phone}<h1>`;
-    });
-  });
-};
+//your code here
+const firstName= document.getElementById("first-name")
+const secondName= document.getElementById("second-name")
+const image= document.getElementById("image")
+const profileInfo = document.getElementById("profile-info")
+const refreshBtn = document.getElementById("getUser")
+//const emailInfo = document.getElementById("email-info")
+//const phoneInfo = document.getElementById("phone-info")
 
-showuser();
-const newUser =document.getElementById("getUser");
-newUser.addEventListener("click", () => {
-  showuser();
-});
+let profileData;
+
+function call(){
+
+const data = fetch("https://randomuser.me/api/")
+data.then(pro => pro.json())
+.then(maindata =>{
+    //console.log(maindata)
+    firstName.textContent=maindata.results[0].name.first
+    secondName.textContent=""+ maindata.results[0].name.last
+    image.src=maindata.results[0].picture.large
+    profileData = maindata;
+})
+}
+
+call();
+
+function refresh(){
+    call()
+    profileInfo.textContent=""
+}
+
+
+
+
+function Age(){
+    profileInfo.textContent=profileData.results[0].dob.age
+}
+
+function Email(){
+    profileInfo.textContent=profileData.results[0].email
+}
+
+function Phone(){
+    profileInfo.textContent=profileData.results[0].phone
+}
+
 
     
