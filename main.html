@@ -8,26 +8,39 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-
-	<div id="img-box">img</div>
-	<h1 id="username">name</h1>
-	<div class="btn-container">
-		<button data-attr="age" id="age"> Age</button>
-		<button data-attr="email" id="email" >Email</button>
-		<button data-attr="phone" id="phone">Phone</button>
+	<div id="first-div">
+		<h1 id="first-name"></h1>
+		<h1 id="second-name"> " "</h1>
 	</div>
-	<section >
-		Additional info
-		<div id="output">
-			
-		</div>
-	</section>
-	<button id="getUser"> New User</button>
+	<div id="second-div">
+		<img id="image" />
+		<br>
+		<br>
+		<button data-attr="age" onclick="Age()">Age</button>
+		<button data-attr="email" onclick="Email()">Email</button>
+		<button data-attr="phone" onclick="Phone()">Phone</button>
+	
+	</div>
+	
+	<div id="thrid-div">
+		<h1>Additional Info</h1>
+		<br>
+		<br>
+		<h2 id="profile-info"></h2>
+		<!--<h2 id="email-info"></h2>
+									<h2 id="phone-info"></h2>-->
+		<br>
+		<br>
+		<button id="getUser" onclick="refresh()">Refresh</button>
+	
+	</div>
     <script type="text/javascript" src="./script.js">
 </script>
 
 </body>
 
 </html>
+
+
     
 
